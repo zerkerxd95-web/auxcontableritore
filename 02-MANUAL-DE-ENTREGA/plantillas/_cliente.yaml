@@ -1,0 +1,34 @@
+# Ficha máquina del cliente. La mantiene el CONTADOR; el auxiliar la lee y no cambia criterios.
+# Ejemplo con el cliente FICTICIO de práctica (06-PRACTICA). Copia este archivo a la carpeta raíz de cada cliente.
+razon_social: COMERCIALIZADORA EJEMPLO SAS
+nit: 900123456
+dv: 8
+regimen: ordinario                 # ordinario | simple | no_responsable
+responsable_iva: true
+periodicidad_iva: bimestral        # bimestral | cuatrimestral — confirmada contra RUT; NUNCA se asume
+agente_retencion: true
+autorretenedor: true
+tarifa_autorretencion: 0.0055      # [VERIFICAR] según CIIU y norma vigente
+cuantia_minima_retencion: por_dia  # por_dia (regla general de la firma) | por_factura (si el contador lo fija)
+municipios_ica: [Medellin]
+reteica_presentar_en_cero: true
+software_contable: S               # S (tipo Siigo) | W (tipo World Office) | otro
+entrega_eeff_mensual: dia_10       # no | dia_10 | dia_15
+cuentas_bancarias:
+  - {cuenta_contable: "11100501", banco: "BANCO EJEMPLO", ultimos4: "1234"}
+pasarelas: []                      # [{nombre: ..., cuenta_por_cobrar: ..., comision: ..., retenciones: ...}]
+criterios_particulares:
+  - criterio: IVA de compras menores a $200.000 como mayor valor del gasto
+    origen: politica definida con el gerente
+    fecha: 2026-01-15
+    vigente: true
+  - criterio: terceros con doble NIT se consolidan en el NIT del RUT mas reciente
+    origen: acuerdo con el contador anterior
+    fecha: 2026-01-15
+    vigente: true
+  - criterio: cuentas de socios (28xx) se revisan con el gerente antes de cualquier cierre
+    origen: antecedente de prestamos sin formalizar
+    fecha: 2026-02-08
+    vigente: true
+vigilancia_reforzada:
+  - ReteICA en cero se presenta igual (sancion previa a la vinculacion)

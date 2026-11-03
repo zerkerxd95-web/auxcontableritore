@@ -1,0 +1,48 @@
+# ==========================================================
+# 🔴 ROJO — datos de clientes: NUNCA al repositorio
+# ==========================================================
+TRABAJOS/
+TRABAJOS Y REQUERIMIENTOS/
+04 - Clientes/
+_ROJO-NO-SUBIR/
+**/01-INSUMOS/
+**/02-PROCESADO/
+**/03-SALIDA/
+**/04-TRAZAS/
+ENTREGA.md
+!02-MANUAL-DE-ENTREGA/plantillas/ENTREGA.md
+_cliente.yaml
+!02-MANUAL-DE-ENTREGA/plantillas/_cliente.yaml
+
+# Credenciales
+.env
+.env.*
+CLAVES*.txt
+*CONTRASE?A*.txt
+*.pem
+*.key
+
+# Obsidian (estado local)
+.obsidian/workspace*.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.trash/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Office
+.~lock.*
+~$*
+
+# Claude Code (estado local de cada máquina)
+.claude/settings.local.json
+
+# Artefactos
+claude-desktop/zips/
+.DS_Store
+Thumbs.db
